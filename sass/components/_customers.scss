@@ -1,0 +1,24 @@
+
+
+.customers {
+     padding-bottom:94px;
+
+     &__title {
+        @include smalltitle;
+     }
+
+     &__container {
+          display:flex;
+          justify-content: space-around;
+     }
+
+     &__icon {
+          border: 1px solid #AFB1B8;
+          border-radius: 4px;
+          width: 170px;
+          height: 92px; 
+          &:hover {
+               @include iconhover();
+          }
+     }
+}

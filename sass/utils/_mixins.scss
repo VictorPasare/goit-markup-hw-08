@@ -1,0 +1,23 @@
+@mixin linktext () {
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: $black-title;
+}
+
+@mixin iconhover {
+    filter: invert(45%) sepia(92%) saturate(1752%) hue-rotate(184deg) brightness(98%) contrast(95%);
+    transition-duration: 250ms;
+    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+   
+}
+
+
+@mixin smalltitle {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    color: $black-title;
+    text-align: center;
+    padding-bottom:50px;
+    margin:0px;
+}

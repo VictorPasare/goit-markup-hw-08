@@ -1,0 +1,181 @@
+
+.request-section {
+    background-image:linear-gradient(to bottom, rgba(255,255,255,0), rgba(81,80,89,0.72)), url(/images/effective-bcg.png);
+    object-fit:fill;
+    background-repeat:no-repeat;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+    width:1600px;
+    height:600px;
+
+    &__title {
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 1.36;
+        text-align: center;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: $white-text;
+        padding:106px 452px 30px 452px;
+        margin:0px;
+    }
+
+    &__button {
+        background-color:$action-color-blue;
+        color:$white-text;
+        cursor:pointer;
+        font-weight:500;
+        padding:10px 19px 10px 20px;
+        margin:30px 700px 200px 700px;
+        width:200px;
+    }
+}
+
+.modal {
+    width: 528px;
+    height: 581px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    margin-top:221px;
+    margin-left:536px;
+    margin-right:536px;
+
+    &__form-intro {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.15;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color:$black-title;
+        padding-top:40px;
+    }
+}
+
+
+.backdrop {
+    position:fixed;
+    top:0;
+    left:auto;
+    width:1600px;
+    height:1028px;
+    background: #00000033;
+    transition:opacity 250ms cubic-bezier(0.4,0,0.2,1), visibility 250ms  cubic-bezier(0.4,0,0.2,1);
+    margin:0 auto;
+}
+
+.backdrop.is-hidden {
+    visibility: hidden;
+    opacity:0;
+    pointer-events:none;
+   }
+
+.form-request {
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+
+    &__input-label {
+        position:relative;
+        &:hover > .form-request__icon {
+            @include iconhover();
+        }
+
+    }
+
+    &__icon {
+        position:absolute;
+        top:50%;
+        left:12px;
+        width:18px;
+        height:18px; 
+    }
+
+    &__btn-submit {
+        background:$action-color-blue;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        padding:10px 80px;
+        color:$white-text;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.875;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.06em;
+        border:none;
+        position:relative;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__conditions {
+        display:flex;
+        flex-direction: row;
+        gap:8px; 
+    }
+
+    &__input:hover {
+        border:2px solid #2196f3;
+    }
+}
+
+.submit {
+    display:flex;
+    justify-content: center;
+    margin-top:30px;
+}
+
+.textarea {
+    resize:none;
+    padding:12px 16px;
+}
+
+
+.section {
+    padding-top:94px;
+}
+
+form {
+    padding-left:40px;
+    padding-right:40px;
+}
+
+.data-modal-close {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 1026px;
+    top: 229px;
+    background: #FFFFFF;
+    border-radius:50%;
+    border: 1px solid #0000001A;
+    &:hover {
+        color:$action-color-blue;
+    }
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+  }
+
+  input {
+    padding: 8px;
+    font-family: inherit;
+    font-size: inherit;
+  }
+
+  textarea {
+    padding: 8px;
+    font-family: inherit;
+    font-size: inherit;
+  }
