@@ -24,12 +24,21 @@ body {
 
   .header-logo {
     padding:16px 0px 16px 15px;
+
     &__link {
+        color:$black-title;
         text-decoration:none;
         font-family : 'Raleway';
         font-weight : 700;
         font-size : 26px;
         line-height : 1.36;
+        &:hover,
+        &:focus,
+        &:active {
+            color: $action-color-blue;
+            transition-duration: 250ms;
+            transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1); 
+        }
     }
     
     &__web {
