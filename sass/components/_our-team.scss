@@ -5,14 +5,19 @@
 
     &__title {
         @include smalltitle();
+        padding:60px 176px 30px 176px;
+        font-size:26px;
+        line-height:1.17;
     }
 
 }
 
 .team-members{
     display:flex;
-    padding-left:215px;
-    padding-right:316px;
+    flex-direction: column;
+    padding-left:15px;
+    padding-right:15px;
+    gap:30px;
    }
 
 .member {
@@ -23,13 +28,13 @@
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 
-    &:nth-child(-n+3) {
-        margin-right:30px;
-    }
     &__name {
         font-weight: 500;
         font-size: 16px;
         line-height: 1.18;
+        padding-top:30px;
+        color:$black-title;
+        margin:0px;
     }
 
     &__role {
@@ -37,12 +42,17 @@
         line-height: 1.18;
         color:$grey-text;
     }
+
+    &__pic {
+        width:450px;
+        height:460px;
+    }
 }
 
 .socials {
     display:flex;
     justify-content:space-between;
-
+    gap:10px;
     &__container {
         display:flex;
         justify-content:center;
@@ -50,13 +60,12 @@
         width:44px;
         height:44px;
         border-radius:33px 33px 33px 33px;
-        margin-bottom:30px;
+        margin-bottom:24px;
 
         &:hover .socials__icon-social {
             filter:brightness(4);
             transition-duration: 250ms;
             transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
-           
         }
 
         &:hover {
@@ -65,7 +74,38 @@
     }
     &__icon-social {
         width:20px;
-        height:16.25px;
-        border-radius:0px 30px 30px 0;
+        height:20px;
     }
+}
+
+
+@media screen and (min-width:$tablet-breakpoint) {
+    .team-members{
+        display:flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+       }
+
+     .member {  
+       &__pic {
+        width:354px;
+        height:374px;
+    }
+}
+}
+
+@media screen and (min-width:$desktop-breakpoint) {
+    .member {  
+        &__pic {
+         width:270px;
+         height:260px;
+     }
+    }
+    .team-members{
+        display:flex;
+        padding-left:215px;
+        padding-right:316px;
+        flex-wrap: nowrap;
+       }
+    
 }

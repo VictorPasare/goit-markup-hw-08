@@ -1,24 +1,38 @@
-
-
 .customers {
-     padding-bottom:94px;
+    padding-bottom:94px;
 
-     &__title {
-        @include smalltitle;
-     }
+    &__title {
+       @include smalltitle;
+    }
 
-     &__container {
-          display:flex;
-          justify-content: space-around;
-     }
+    &__container {
+        display:flex;
+        flex-wrap:wrap;
+        gap:30px;
+        justify-content: center;
+    }
 
-     &__icon {
-          border: 1px solid #AFB1B8;
-          border-radius: 4px;
-          width: 170px;
-          height: 92px; 
-          &:hover {
-               @include iconhover();
-          }
-     }
+    &__icon {
+
+         border: 1px solid #AFB1B8;
+         border-radius: 4px;
+         width: 210px;
+         height: 92px; 
+         &:hover {
+              @include iconhover();
+         }
+    }
+}
+
+@media screen and (min-width:$desktop-breakpoint) {
+    .customers {
+        &__icon {
+            width:170px;
+        }
+
+        &__container {
+            display:flex;
+            justify-content:space-around;
+        }
+    }
 }

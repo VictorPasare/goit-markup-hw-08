@@ -13,8 +13,8 @@
 </head>
 <body>
     <header class="header">
-        <div class="header-logo"><a class="link header-logo__link" href="index.html" ><span class="header-logo__web">Web</span>Studio</a></div>
-        <nav>
+        <div class="header-logo"><a class="header-logo__link" href="index.html" ><span class="header-logo__web">Web</span><span class="header-logo__studio">Studio</span></a></div>
+        <nav class="navigation">
             <ul class="list navigation-list">
                 <li><a class="link navigation-list__link navigation-list__link--studio current-page" href="/index.html">Studio</a></li>
                 <li><a class="link navigation-list__link navigation-list__link--portofolio" href="/portofolio.html" >Portofolio</a></li>
@@ -25,6 +25,24 @@
         <a class="link contact-info__link contact-info__link--email" href="mailto:info@devstudio.com" ><svg class="icon-envelope"><use href="/images/icons.svg#icon-envelope"></use></svg>info@devstudio.com</a>
         <a class="link contact-info__link contact-info__link--phone" href="tel:+12127724150" ><svg class="icon-phone"><use href="/images/icons.svg#icon-smartphone"></use></svg>+1 212-772-4150</a>
         </div>
+        <button
+        class="menu-toggle js-open-menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg
+          width="24"
+          height="24"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
     </header>
     <main>
         <section class="section request-section">
@@ -78,30 +96,38 @@
         <section class="section business-description container">
             <ul class="list business-description__list">
                 <li>
+                    <div class="business-description__icon-container">
                     <svg class="business-description__icon-feature">
-                        <use href="/images/icons.svg#icon-Group-1"></use>
+                        <use href="/images/icons.svg#icon-antenna"></use>
                     </svg>
+                </div>
             <h4 class="business-description__title">Attention to details</h4>
             <p class="business-description__par">We go into all the details and processes of your business to develop a customized solution.</p>
                 </li>
                 <li>
-                    <svg class="business-description__icon-feature">
-                        <use href="/images/icons.svg#icon-Group-2"></use>
-                    </svg>
+                    <div class="business-description__icon-container">
+                        <svg class="business-description__icon-feature">
+                            <use href="/images/icons.svg#icon-clock"></use>
+                        </svg>
+                    </div>
             <h4 class="business-description__title">Punctuality</h4>
             <p class="business-description__par">With us, you can feel safe and secure. An important principle of the company: respect your time and deadlines.</p>
                 </li>
                 <li>
-                    <svg class="business-description__icon-feature">
-                        <use href="/images/icons.svg#icon-Group-3"></use>
-                    </svg>
+                    <div class="business-description__icon-container">
+                        <svg class="business-description__icon-feature">
+                            <use href="/images/icons.svg#icon-diagram"></use>
+                        </svg>
+                    </div>
             <h4 class="business-description__title">Planning</h4>
             <p class="business-description__par">You will be able to observe and participate in every phase of solution development and implementation.</p>
                 </li> 
                 <li>
-                    <svg class="business-description__icon-feature">
-                        <use href="/images/icons.svg#icon-Group-4"></use>
-                    </svg>
+                    <div class="business-description__icon-container">
+                        <svg class="business-description__icon-feature">
+                            <use href="/images/icons.svg#icon-astronaut"></use>
+                        </svg>
+                    </div>
             <h4 class="business-description__title">Modern Technologies</h4>
             <p class="business-description__par">We use innovative tools to solve assigned tasks. It's time to simplify work processes.</p>
                 </li>
@@ -119,7 +145,7 @@
             <h2 class="our-team__title">Our team</h2>
             <div class="team-members">
             <div class="member">
-                <img src="./images/chrispic.jpg" width="270" height="260" alt="Christopher">
+                <img src="./images/chrispic.jpg" class="member__pic"  alt="Christopher">
                 <h3 class="member__name">Christopher Walker</h3>
                 <p class="member__role">Product Designer</p>
                 <div class="socials">
@@ -130,7 +156,7 @@
                 </div>
             </div>
             <div class="member">
-                <img src="./images/kyliepic.jpg" width="270" height="260" alt="Kylie"> 
+                <img src="./images/kyliepic.jpg" class="member__pic"  alt="Kylie"> 
                 <h3 class="member__name">Kylie Evans</h3>
                 <p class="member__role">Frontend Developer</p>
                 <div class="socials">
@@ -141,7 +167,7 @@
                 </div>
             </div>
             <div class='member'>
-                <img src="./images/ryanpic.jpg" width="270" height="260" alt="Ryan">
+                <img src="./images/ryanpic.jpg" class="member__pic" alt="Ryan">
                 <h3 class="member__name">Ryan Harris</h3>
                 <p class="member__role">Marketing</p>
                 <div class="socials">
@@ -152,7 +178,7 @@
                 </div>
             </div>
             <div class="member">
-                <img src="./images/tylerpic.jpg" width="270" height="260" alt="Tyler">
+                <img src="./images/tylerpic.jpg" class="member__pic" alt="Tyler">
                 <h3 class="member__name">Tyler Moore</h3>
                 <p class="member__role">UI Designer</p>
                 <div class="socials">
@@ -189,14 +215,14 @@
         </section>
     </main>
     <footer class="main-footer">
-        <div class="footer-details">
-         <div class="footer-logo"><a class="link header-logo__link" href="/index.html"><span class="footer-logo__web">Web</span><span class="footer-logo__studio">studio</span></a></div>
+        <div class="details-container">
+         <div class="footer-logo"><a class=" header-logo__link" href="/index.html"><span class="footer-logo__web">Web</span><span class="footer-logo__studio">Studio</span></a></div>
         <address class="address">
         <p class="adress__location">695 Park Ave, NY 10065, USA</p>
         <a class="link footer-details__email footer-email-link" href="mailto:info@devstudio.com"><svg class="icon-envelope"><use href="/images/icons.svg#icon-envelope"></use></svg>info@devstudio.com</a>
         <a class="link footer-details__phone footer-phone-link" href="tel:+12127724150" ><svg class="icon-phone"><use href="/images/icons.svg#icon-smartphone"></use></svg>+1 212-772-4150</a>
         </address>
-        </div>
+    </div>
      <section class="findus">
         <h4>FIND US ON</h4>
         <div class="socials-footer">
@@ -219,6 +245,46 @@
         </div>
      </section>
     </footer>
+    <div class="menu-container js-menu-container" id="mobile-menu">
+        <button class="menu-toggle js-close-menu">
+          <svg
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+  
+        <div class="mobile-menu">
+            <a class="mobile-menu__link mobile-menu__link--studio" href="/index.html">Studio</a>
+            <a class="mobile-menu__link mobile-menu__link--portofolio" href="/portofolio.html" >Portofolio</a>
+            <a class="mobile-menu__link mobile-menu__link--contacts" href="/contacts.html" >Contacts</a>
+            <div class="phone-mobile">
+            <a class="mobile-menu__link mobile-menu__link--email" href="mailto:info@devstudio.com" >info@devstudio.com</a>
+            <a class="mobile-menu__link mobile-menu__link--phone" href="tel:+12127724150" >+1 212-772-4150</a>
+            </div>
+          <ul class="social-links">
+            <li>Instagram</li>
+            <li>Twitter</li>
+            <li>Facebook</li>
+            <li>Linkedin</li>
+          </ul>
+        </div>
+      </div>
+    <script
+    defer
+    src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"
+  ></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 </html>
